@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Mar 2024 pada 04.10
+-- Waktu pembuatan: 16 Mar 2024 pada 05.51
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -28,8 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
-  `nip` char(9) NOT NULL,
-  `password` varchar(8) NOT NULL
+  `nip` char(8) NOT NULL,
+  `password` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`nip`, `password`) VALUES
-('126062005', '12345678');
+('26062005', '25d55ad283aa400af464c76d713c07ad');
 
 -- --------------------------------------------------------
 
@@ -46,8 +46,8 @@ INSERT INTO `admin` (`nip`, `password`) VALUES
 --
 
 CREATE TABLE `barang` (
-  `kode_barang` varchar(5) NOT NULL,
-  `nama_barang` varchar(10) NOT NULL
+  `kode_barang` varchar(4) NOT NULL,
+  `nama_barang` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -68,8 +68,8 @@ INSERT INTO `barang` (`kode_barang`, `nama_barang`) VALUES
 CREATE TABLE `surat_keluar` (
   `no_surat_keluar` char(10) NOT NULL,
   `tanggal_keluar` date NOT NULL,
-  `kode_barang` varchar(5) NOT NULL,
-  `nama_barang` varchar(10) NOT NULL
+  `kode_barang` varchar(4) NOT NULL,
+  `nama_barang` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
